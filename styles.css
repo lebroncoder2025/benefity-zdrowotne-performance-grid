@@ -34,7 +34,7 @@ body{font-family:var(--font-body);color:var(--ink);background:var(--light);line-
 /* ── Header ──────────────────────────────────── */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(240,244,243,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.05);}
 .header-inner{display:flex;align-items:center;gap:1.5rem;max-width:var(--max-w);margin:0 auto;padding:.7rem 2rem;}
-.brand img{display:block;border-radius:4px;}
+.brand img{display:block;border-radius:4px;height:56px;width:auto;}
 .site-nav{display:flex;gap:1.5rem;margin-right:auto;}
 .site-nav a{font-size:.8rem;font-weight:600;color:var(--ink-mid);text-decoration:none;transition:color .2s;}
 .site-nav a:hover,.site-nav a.active{color:var(--ink);}
@@ -122,6 +122,15 @@ h3{font-family:var(--font-head);font-weight:700;font-size:.92rem;}
 .stat-highlight p{font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
 .stat-highlight span{font-size:.75rem;opacity:.5;display:block;margin-top:.3rem;}
 
+/* ── Financial split ─────────────────────────── */
+.fin-split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.fin-img img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);}
+.fin-copy .label{margin-bottom:.8rem;}
+.fin-stat{font-family:var(--font-head);font-size:4.5rem;font-weight:800;color:var(--mint);line-height:1;margin:.4rem 0 .8rem;}
+.fin-stat span{font-size:2.5rem;}
+.fin-copy p{font-size:1.05rem;line-height:1.7;color:var(--ink-mid);}
+.fin-copy cite{font-size:.82rem;color:var(--ink-soft);opacity:.7;font-style:normal;margin-top:.4rem;display:block;}
+
 /* ── Process steps ───────────────────────────── */
 .process-steps{display:flex;gap:0;position:relative;}
 .p-step{flex:1;display:flex;flex-direction:column;align-items:flex-start;position:relative;padding:2rem 1.5rem 0 0;}
@@ -183,6 +192,7 @@ h3{font-family:var(--font-head);font-weight:700;font-size:.92rem;}
   .trust-row{justify-content:center;}
   .hero-visual{justify-content:center;max-height:300px;}
   .panel-grid{grid-template-columns:1fr;}
+  .fin-split{grid-template-columns:1fr;}
   .benefit-cards{grid-template-columns:1fr;}
   .process-steps{flex-direction:column;}
   .p-step-line{display:none;}
