@@ -207,13 +207,25 @@ h3{font-family:var(--font-head);font-weight:700;font-size:.92rem;}
   .photo--large{grid-column:auto;}
 }
 @media(max-width:640px){
+  .header-inner{padding:.7rem 1.25rem;}
+  .logo-clip{width:56px;height:56px;}
+  .logo-clip img{width:56px;height:56px;}
   .nav-toggle{display:block;}
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--light);flex-direction:column;padding:1rem 2rem;gap:.6rem;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--light);flex-direction:column;padding:1rem 1.25rem;gap:.6rem;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);}
   .site-nav.is-open{display:flex;}
   .header-cta{display:none;}
   .hero{padding:2rem 1.25rem;}
-  .section{padding:3rem 1.25rem;}
+  .hero-visual{max-height:200px;overflow:hidden;}
+  h1{font-size:1.85rem;}
+  .hero-stats{gap:.6rem;}
+  .section{padding:2.5rem 1.25rem;}
+  .fin-stat{font-size:2.8rem;}
+  .fin-stat span{font-size:1.6rem;}
+  .promo-banner{padding:2rem 1.25rem;}
+  .promo-inner{flex-direction:column;text-align:center;gap:1.25rem;}
   .team-card{grid-template-columns:1fr;text-align:center;}
   .team-img img{max-width:150px;margin:0 auto;}
   .photo-grid{grid-template-columns:1fr;}
+  .footer-inner{flex-direction:column;text-align:center;}
+  .footer-inner nav{justify-content:center;flex-wrap:wrap;gap:.75rem;}
 }
