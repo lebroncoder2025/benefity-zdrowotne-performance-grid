@@ -64,26 +64,10 @@
     }, { passive: true });
   }
 
-  /* ── Staggered card reveals ─────────────── */
-  const panels = document.querySelectorAll('.panel, .benefit-card, .c-card');
-  if (panels.length && 'IntersectionObserver' in window) {
-    const pio = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          pio.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.05 });
-    panels.forEach((el, i) => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      const delay = (i * 0.06).toFixed(2);
-      el.style.transition = `opacity .5s ease ${delay}s, transform .5s ease ${delay}s`;
-      pio.observe(el);
-    });
-  }
+  /* ── Staggered card reveals (now CSS-driven, JS removed) ── */
+  /* Card stagger is handled purely by CSS transitions on
+     .reveal.is-visible .panel / .benefit-card / .c-card.
+     No inline styles needed — eliminates the dual-opacity bug. */
 
   /* ── Smooth anchor scroll ───────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
