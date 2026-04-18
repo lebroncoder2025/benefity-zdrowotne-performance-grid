@@ -68,18 +68,19 @@
   const panels = document.querySelectorAll('.panel, .benefit-card, .c-card');
   if (panels.length && 'IntersectionObserver' in window) {
     const pio = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
+      entries.forEach((e) => {
         if (e.isIntersecting) {
-          e.target.style.transitionDelay = (i * 0.08) + 's';
-          e.target.classList.add('is-visible');
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
           pio.unobserve(e.target);
         }
       });
     }, { threshold: 0.05 });
-    panels.forEach(el => {
+    panels.forEach((el, i) => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      const delay = (i * 0.06).toFixed(2);
+      el.style.transition = `opacity .5s ease ${delay}s, transform .5s ease ${delay}s`;
       pio.observe(el);
     });
   }
